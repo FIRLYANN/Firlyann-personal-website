@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Firlyan Priyoko | Personal Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="logo">
+            Firlyan.
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-links">
+
+            <button onclick="showPage('home')">
+                Beranda
+            </button>
+
+            <button onclick="showPage('about')">
+                About Me
+            </button>
+
+            <button onclick="showPage('future')">
+                Masa Depan
+            </button>
+
+            <button class="theme-btn" onclick="toggleTheme()">
+                ☀️
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- BERANDA -->
+    <section id="home" class="page active">
+
+        <div class="container hero">
+
+            <div class="avatar">
+
+                <img
+                    src="images/Profil.png"
+                    alt="Foto Firlyan Priyoko">
+
+            </div>
+
+            <h1>
+                Halo, Saya
+                <span>Firlyan Priyoko</span>
+            </h1>
+
+            <p class="subtitle">
+                XII ITCP PUTRA • MAM 1 KARANGASEM
+            </p>
+
+            <p class="subtitle">
+                <span class="typing"></span>
+            </p>
+
+            <p class="motto">
+                "Coba Aja dulu"
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    class="btn"
+                    onclick="showPage('about')">
+
+                    About Me
+
+                </button>
+
+                <button
+                    class="btn secondary"
+                    onclick="showPage('future')">
+
+                    Lihat Cita-cita
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT ME -->
+    <section id="about" class="page">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>About Me</h2>
+
+                <p>
+                    Mengenal saya lebih dekat
+                </p>
+
+            </div>
+
+
+            <div class="grid">
+
+
+                <!-- TENTANG -->
+                <div class="card">
+
+                    <h3>👋 Tentang Saya</h3>
+
+                    <p>
+                        Saya adalah <strong>Firlyan Priyoko</strong>,
+                        siswa kelas XII ITCP PUTRA di
+                        MAM 1 KARANGASEM.
+                        Saya memiliki kepribadian yang baik.
+                    </p>
+
+                </div>
+
+
+                <!-- HOBI -->
+                <div class="card">
+
+                    <h3>📚 Hobi</h3>
+
+                    <p>
+                        Saya memiliki hobi membaca.
+                    </p>
+
+                </div>
+
+
+                <!-- MINAT -->
+                <div class="card">
+
+                    <h3>🩺 Minat</h3>
+
+                    <p>
+                        Saya tertarik pada bidang kedokteran
+                        dan kesehatan.
+                    </p>
+
+                </div>
+
+
+                <!-- SKILL -->
+                <div class="card">
+
+                    <h3>💻 Skill</h3>
+
+                    <p>
+                        Belum dicantumkan.
+                    </p>
+
+                </div>
+
+
+                <!-- PENGALAMAN -->
+                <div class="card">
+
+                    <h3>🚀 Pengalaman</h3>
+
+                    <p>
+                        Belum ada prestasi atau pengalaman
+                        yang ingin dicantumkan.
+                    </p>
+
+                </div>
+
+
+                <!-- PRINSIP -->
+                <div class="card">
+
+                    <h3>🎯 Prinsip</h3>
+
+                    <p>
+                        "Coba Aja dulu."
+                    </p>
+
+                </div>
+
+
+                <!-- KONTAK -->
+                <div class="card contact">
+
+                    <h3>📱 Kontak</h3>
+
+                    <p>
+                        Kamu bisa menemukan saya melalui
+                        Instagram:
+                    </p>
+
+                    <a
+                        href="https://instagram.com/firlyfayer"
+                        target="_blank">
+
+                        @firlyfayer
+
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <button
+                    class="btn secondary"
+                    onclick="showPage('home')">
+
+                    ← Beranda
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MASA DEPAN -->
+    <section id="future" class="page">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>Rencana Masa Depan</h2>
+
+                <p>
+                    Langkah menuju cita-cita
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <!-- SEKARANG -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <h3>📚 Sekarang</h3>
+
+                    <p>
+                        Menyelesaikan pendidikan di
+                        MAM 1 KARANGASEM.
+                    </p>
+
+                </div>
+
+
+                <!-- KULIAH -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <h3>🎓 Perguruan Tinggi</h3>
+
+                    <p>
+                        Melanjutkan pendidikan dengan
+                        mengambil jurusan Kedokteran.
+                    </p>
+
+                </div>
+
+
+                <!-- CITA-CITA -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <h3>🩺 Cita-cita</h3>
+
+                    <p>
+                        Menjadi seorang dokter dan
+                        berkontribusi dalam bidang kesehatan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <button
+                    class="btn secondary"
+                    onclick="showPage('home')">
+
+                    ← Beranda
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        © 2026 Firlyan Priyoko —
+        Personal Website
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
