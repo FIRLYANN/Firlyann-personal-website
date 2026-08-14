@@ -1,337 +1,476 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Firlyan Priyoko | Personal Website</title>
+    <title>Firlyan Priyoko</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
+    <!-- BACKGROUND -->
+    <div class="space space-1"></div>
+    <div class="space space-2"></div>
+    <div class="space space-3"></div>
 
-        <div class="logo">
-            Firlyan.
+    <div class="noise"></div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="logo-text">
+            FP<span>_</span>
         </div>
 
-        <button class="menu-btn" onclick="toggleMenu()">
-            ☰
+        <nav>
+            <button data-page="0">01 Home</button>
+            <button data-page="1">02 About</button>
+            <button data-page="2">03 Interests</button>
+            <button data-page="3">04 Future</button>
+            <button data-page="4">05 Contact</button>
+        </nav>
+
+        <div class="status">
+            <i></i>
+            Online
+        </div>
+
+    </header>
+
+
+    <!-- PAGE 1 -->
+    <main class="page active" data-index="0">
+
+        <div class="page-number">
+            01 / 05
+        </div>
+
+        <div class="home-layout">
+
+            <!-- LOGO -->
+            <div class="hero-emblem">
+
+                <div class="chrome-ring">
+
+                    <div class="chrome-logo">
+
+                        <img
+                            src="images/chrome-medical.png"
+                            alt="Medical emblem"
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="orbit orbit-a"></div>
+                <div class="orbit orbit-b"></div>
+
+            </div>
+
+
+            <!-- CENTER -->
+            <div class="hero-center">
+
+                <p class="small-title">
+                    Personal archive
+                </p>
+
+                <h1>
+                    Firlyan
+                    <span>Priyoko</span>
+                </h1>
+
+                <div class="title-line"></div>
+
+                <p class="motto">
+                    Audentes Fortuna Iuvat
+                </p>
+
+                <p class="motto-small">
+                    Fortune favors the bold.
+                </p>
+
+            </div>
+
+
+            <!-- PHOTO -->
+            <div class="profile">
+
+                <div class="photo-box">
+
+                    <img
+                        src="images/Profil.png"
+                        alt="Firlyan Priyoko"
+                    >
+
+                </div>
+
+                <p>
+                    FP / 2026
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="page-button next" data-next="1">
+            <span>Enter</span>
+            <b>→</b>
         </button>
 
-        <div class="nav-links">
+    </main>
 
-            <button onclick="showPage('home')">
-                Beranda
-            </button>
 
-            <button onclick="showPage('about')">
-                About Me
-            </button>
 
-            <button onclick="showPage('future')">
-                Masa Depan
-            </button>
+    <!-- PAGE 2 -->
+    <main class="page" data-index="1">
 
-            <button class="theme-btn" onclick="toggleTheme()">
-                ☀️
-            </button>
-
+        <div class="page-number">
+            02 / 05
         </div>
 
-    </nav>
+        <div class="content">
 
+            <p class="small-title">
+                Personal archive
+            </p>
 
-    <!-- BERANDA -->
-    <section id="home" class="page active">
+            <h2>
+                Who I Am
+            </h2>
 
-        <div class="container hero">
-
-            <div class="avatar">
-
-                <img
-                    src="images/Profil.png"
-                    alt="Foto Firlyan Priyoko">
-
+            <div class="ornament">
+                ✦
             </div>
 
-            <h1>
-                Halo, Saya
-                <span>Firlyan Priyoko</span>
-            </h1>
-
-            <p class="subtitle">
-                XII ITCP PUTRA • MAM 1 KARANGASEM
-            </p>
-
-            <p class="subtitle">
-                <span class="typing"></span>
-            </p>
-
-            <p class="motto">
-                "Coba Aja dulu"
-            </p>
-
-            <div class="buttons">
-
-                <button
-                    class="btn"
-                    onclick="showPage('about')">
-
-                    About Me
-
-                </button>
-
-                <button
-                    class="btn secondary"
-                    onclick="showPage('future')">
-
-                    Lihat Cita-cita
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT ME -->
-    <section id="about" class="page">
-
-        <div class="container">
-
-            <div class="title">
-
-                <h2>About Me</h2>
+            <div class="about">
 
                 <p>
-                    Mengenal saya lebih dekat
+                    I am someone who is always curious about
+                    what lies beyond what I already know.
+                    I believe that every experience has
+                    something to teach.
+                </p>
+
+                <p>
+                    I see growth as a continuous journey.
+                    There is always something new to learn,
+                    something to improve, and another step
+                    worth taking.
+                </p>
+
+                <p class="quote">
+                    Audentes Fortuna Iuvat.
                 </p>
 
             </div>
 
-
-            <div class="grid">
-
-
-                <!-- TENTANG -->
-                <div class="card">
-
-                    <h3>👋 Tentang Saya</h3>
-
-                    <p>
-                        Saya adalah <strong>Firlyan Priyoko</strong>,
-                        siswa kelas XII ITCP PUTRA di
-                        MAM 1 KARANGASEM.
-                        Saya memiliki kepribadian yang baik.
-                    </p>
-
-                </div>
+        </div>
 
 
-                <!-- HOBI -->
-                <div class="card">
+        <div class="button-row">
 
-                    <h3>📚 Hobi</h3>
+            <button class="page-button back" data-next="0">
+                ← <span>Back</span>
+            </button>
 
-                    <p>
-                        Saya memiliki hobi membaca.
-                    </p>
+            <button class="page-button" data-next="2">
+                <span>Continue</span> →
+            </button>
 
-                </div>
+        </div>
 
-
-                <!-- MINAT -->
-                <div class="card">
-
-                    <h3>🩺 Minat</h3>
-
-                    <p>
-                        Saya tertarik pada bidang kedokteran
-                        dan kesehatan.
-                    </p>
-
-                </div>
+    </main>
 
 
-                <!-- SKILL -->
-                <div class="card">
 
-                    <h3>💻 Skill</h3>
+    <!-- PAGE 3 -->
+    <main class="page" data-index="2">
 
-                    <p>
-                        Belum dicantumkan.
-                    </p>
+        <div class="page-number">
+            03 / 05
+        </div>
 
-                </div>
+        <div class="content wide">
 
+            <p class="small-title">
+                Personal archive
+            </p>
 
-                <!-- PENGALAMAN -->
-                <div class="card">
+            <h2>
+                Interests
+            </h2>
 
-                    <h3>🚀 Pengalaman</h3>
-
-                    <p>
-                        Belum ada prestasi atau pengalaman
-                        yang ingin dicantumkan.
-                    </p>
-
-                </div>
-
-
-                <!-- PRINSIP -->
-                <div class="card">
-
-                    <h3>🎯 Prinsip</h3>
-
-                    <p>
-                        "Coba Aja dulu."
-                    </p>
-
-                </div>
-
-
-                <!-- KONTAK -->
-                <div class="card contact">
-
-                    <h3>📱 Kontak</h3>
-
-                    <p>
-                        Kamu bisa menemukan saya melalui
-                        Instagram:
-                    </p>
-
-                    <a
-                        href="https://instagram.com/firlyfayer"
-                        target="_blank">
-
-                        @firlyfayer
-
-
-                    </a>
-
-                </div>
-
+            <div class="ornament">
+                ✦
             </div>
 
 
-            <div class="buttons">
+            <div class="interest-grid">
 
-                <button
-                    class="btn secondary"
-                    onclick="showPage('home')">
 
-                    ← Beranda
+                <article>
 
-                </button>
+                    <span class="number">
+                        01
+                    </span>
+
+                    <div class="icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Hobby
+                    </h3>
+
+                    <div class="mini-line"></div>
+
+                    <p>
+                        Reading and exploring new ideas
+                        to broaden my perspective and
+                        discover different ways of thinking.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="number">
+                        02
+                    </span>
+
+                    <div class="icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        Skill
+                    </h3>
+
+                    <div class="mini-line"></div>
+
+                    <p>
+                        Problem solving, learning,
+                        adapting, communicating, and
+                        continuously improving.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="number">
+                        03
+                    </span>
+
+                    <div class="icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Achievement
+                    </h3>
+
+                    <div class="mini-line"></div>
+
+                    <p>
+                        Every challenge completed and
+                        every new skill learned becomes
+                        part of the journey forward.
+                    </p>
+
+                </article>
+
 
             </div>
 
         </div>
 
-    </section>
+
+        <div class="button-row">
+
+            <button class="page-button back" data-next="1">
+                ← <span>Back</span>
+            </button>
+
+            <button class="page-button" data-next="3">
+                <span>Continue</span> →
+            </button>
+
+        </div>
+
+    </main>
 
 
-    <!-- MASA DEPAN -->
-    <section id="future" class="page">
 
-        <div class="container">
+    <!-- PAGE 4 -->
+    <main class="page" data-index="3">
 
-            <div class="title">
+        <div class="page-number">
+            04 / 05
+        </div>
 
-                <h2>Rencana Masa Depan</h2>
+        <div class="future-layout">
 
-                <p>
-                    Langkah menuju cita-cita
+            <div class="future-copy">
+
+                <p class="small-title">
+                    Future archive
                 </p>
 
-            </div>
+                <h2>
+                    My Future
+                </h2>
 
-
-            <div class="timeline">
-
-
-                <!-- SEKARANG -->
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <h3>📚 Sekarang</h3>
-
-                    <p>
-                        Menyelesaikan pendidikan di
-                        MAM 1 KARANGASEM.
-                    </p>
-
+                <div class="ornament">
+                    ✦
                 </div>
 
+                <p class="future-label">
+                    Future occupation
+                </p>
 
-                <!-- KULIAH -->
-                <div class="timeline-item">
+                <h3>
+                    Doctor
+                </h3>
 
-                    <div class="timeline-dot"></div>
+                <p class="future-description">
+                    My goal is to pursue medicine and become
+                    a doctor. I want to continue developing
+                    my knowledge, learning from every
+                    experience, and eventually contribute
+                    to the world of healthcare.
+                </p>
 
-                    <h3>🎓 Perguruan Tinggi</h3>
+                <div class="future-info">
 
-                    <p>
-                        Melanjutkan pendidikan dengan
-                        mengambil jurusan Kedokteran.
-                    </p>
+                    <span>
+                        Goal / Medicine
+                    </span>
 
-                </div>
-
-
-                <!-- CITA-CITA -->
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <h3>🩺 Cita-cita</h3>
-
-                    <p>
-                        Menjadi seorang dokter dan
-                        berkontribusi dalam bidang kesehatan.
-                    </p>
+                    <span>
+                        Status / In progress
+                    </span>
 
                 </div>
 
             </div>
 
 
-            <div class="buttons">
+            <div class="future-emblem">
 
-                <button
-                    class="btn secondary"
-                    onclick="showPage('home')">
+                <div class="big-chrome">
 
-                    ← Beranda
+                    <img
+                        src="images/chrome-medical.png"
+                        alt="Medical emblem"
+                    >
 
-                </button>
+                </div>
+
+                <div class="big-orbit"></div>
 
             </div>
 
         </div>
 
-    </section>
+
+        <div class="button-row">
+
+            <button class="page-button back" data-next="2">
+                ← <span>Back</span>
+            </button>
+
+            <button class="page-button" data-next="4">
+                <span>Continue</span> →
+            </button>
+
+        </div>
+
+    </main>
 
 
-    <!-- FOOTER -->
-    <footer>
 
-        © 2026 Firlyan Priyoko —
-        Personal Website
+    <!-- PAGE 5 -->
+    <main class="page" data-index="4">
 
-    </footer>
+        <div class="page-number">
+            05 / 05
+        </div>
+
+        <div class="content contact-content">
+
+            <p class="small-title">
+                Final transmission
+            </p>
+
+            <h2>
+                Contact
+            </h2>
+
+            <div class="ornament">
+                ✦
+            </div>
+
+            <p class="contact-description">
+                Find me through the signal.
+            </p>
+
+
+            <a
+                href="https://instagram.com/firlyfayer"
+                target="_blank"
+                class="instagram"
+            >
+
+                <span>
+                    Instagram
+                </span>
+
+                <strong>
+                    @firlyfayer ↗
+                </strong>
+
+            </a>
+
+
+            <p class="final-motto">
+                Audentes Fortuna Iuvat
+            </p>
+
+        </div>
+
+
+        <div class="button-row">
+
+            <button class="page-button back" data-next="3">
+                ← <span>Back</span>
+            </button>
+
+        </div>
+
+
+        <footer>
+            Personal archive / 2026
+            <span>FP_</span>
+        </footer>
+
+    </main>
 
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
