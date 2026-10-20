@@ -7,22 +7,55 @@ const navButtons = document.querySelectorAll(".navbar nav button");
 const pageButtons = document.querySelectorAll(".page-button");
 
 let currentPage = 0;
+let changing = false;
 
 
 /* =====================================
-   SCROLL TO PAGE
+   SHOW PAGE
 ===================================== */
 
-function scrollToPage(index) {
+function showPage(index) {
 
     if (index < 0 || index >= pages.length) {
         return;
     }
 
-    pages[index].scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    if (index === currentPage) {
+        return;
+    }
+
+    if (changing) {
+        return;
+    }
+
+    changing = true;
+
+
+    /* Remove current */
+
+    pages[currentPage].classList.remove("active");
+
+    navButtons[currentPage].classList.remove("active");
+
+
+    /* Small delay for cinematic transition */
+
+    setTimeout(() => {
+
+        currentPage = index;
+
+        pages[currentPage].classList.add("active");
+
+        navButtons[currentPage].classList.add("active");
+
+    }, 100);
+
+
+    setTimeout(() => {
+
+        changing = false;
+
+    }, 750);
 }
 
 
@@ -30,28 +63,16 @@ function scrollToPage(index) {
    INITIAL PAGE
 ===================================== */
 
-function updateCurrentPage() {
+pages.forEach((page, index) => {
 
-    const viewportCenter = window.innerHeight / 2;
+    page.classList.toggle(
+        "active",
+        index === 0
+    );
 
-    pages.forEach((page, index) => {
+});
 
-        const bounds = page.getBoundingClientRect();
-
-        if (bounds.top <= viewportCenter && bounds.bottom > viewportCenter) {
-            currentPage = index;
-        }
-
-    });
-
-    navButtons.forEach((button, index) => {
-        button.classList.toggle("active", index === currentPage);
-    });
-}
-
-window.addEventListener("scroll", updateCurrentPage, { passive: true });
-window.addEventListener("resize", updateCurrentPage);
-updateCurrentPage();
+navButtons[0].classList.add("active");
 
 
 /* =====================================
@@ -65,7 +86,7 @@ navButtons.forEach((button) => {
         const target =
             Number(button.dataset.page);
 
-        scrollToPage(target);
+        showPage(target);
 
     });
 
@@ -83,7 +104,7 @@ pageButtons.forEach((button) => {
         const target =
             Number(button.dataset.next);
 
-        scrollToPage(target);
+        showPage(target);
 
     });
 
@@ -99,7 +120,7 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight") {
 
         if (currentPage < pages.length - 1) {
-            scrollToPage(currentPage + 1);
+            showPage(currentPage + 1);
         }
 
     }
@@ -107,7 +128,7 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
 
         if (currentPage > 0) {
-            scrollToPage(currentPage - 1);
+            showPage(currentPage - 1);
         }
 
     }
